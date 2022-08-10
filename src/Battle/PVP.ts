@@ -16,9 +16,3 @@ class PVP extends Battle {
 }
 
 export default PVP;
-
-/* {
-  while (player1.lifePoints > -1 && player2.lifePoints > -1) {
-    player1.attack(player2);
-    player2.attack(player1);
-  }} */
