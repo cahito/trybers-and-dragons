@@ -15,10 +15,10 @@ class Character implements Fighter {
   private _dexterity: number;
   private _energy: Energy;
 
-  constructor(name: string) {
+  constructor(name: string, race?: Race, archtype?: Archetype) {
     this._name = name;
-    this._race = new Elf(this._name, 0);
-    this._archetype = new Mage(this._name);
+    this._race = race || new Elf(this._name, 0);
+    this._archetype = archtype || new Mage(this._name);
     this._maxLifePoints = this._race.maxLifePoints / 2;
     this._lifePoints = this._maxLifePoints;
     this._strength = getRandomInt(1, 10);
